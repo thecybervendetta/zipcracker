@@ -16,12 +16,15 @@ A lightweight, efficient Bash-based dictionary attack tool for password-protecte
    cd zipcracker/src
 
 2. **Make the script executable**
+    ```bash
     chmod +x zipcracker
 
 3. **Make the script global**
+    ```bash
     sudo cp zipcracker /usr/local/bin/zipcracker
 
 4. **Run the cracker**
+    ```bash
     zipcracker passwords.txt secure.zip
 
 Note: passwords.txt is the password list required, and secure.zip is the encrypted zip file, you can use the path these parameters in the script(i.e /home/user/Downloads/passwords.txt, /home/user/Downloads/secure.zip)
