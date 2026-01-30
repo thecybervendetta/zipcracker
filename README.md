@@ -12,7 +12,7 @@ A lightweight, efficient Bash-based dictionary attack tool for password-protecte
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/yourusername/zipcracker.git](https://github.com/yourusername/zipcracker.git)
+   git clone https://github.com/Richieacey/zipcracker.git
    cd zipcracker/src
 
 2. **Make the script executable**
