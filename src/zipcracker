@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# check if first parameter is not empty
+if [[ -z "$1" || -z "$2" ]]; then
+	echo "Usage: $0 <password_list.txt> <target_file.zip>"
+	exit 1
+fi
+# check if password list file exists
+
+if [[ ! -f "$1" ]]; then
+	echo "Error: Password list "$1" not found"
+	exit 1
+fi
+
+TARGET="$2"
+
+# check if target exists
+
+if [[ ! -f "$TARGET" ]]; then 
+	echo "Error: target file "$TARGET" not found"
+	exit 1
+fi
+
+echo "Cracking zip file...."
+# while loop to read the file line by line
+
+while IFS= read -r pass; do
+	unzip -P "$pass" -t "$TARGET" > /dev/null 2>&1
+	
+	# check the exit status of the unzip command
+	if [ $? -eq 0 ]; then
+		echo "Password found: $pass"
+		exit 0
+	fi
+done <"$1"
+
+echo "Password list exhausted. No match found."
