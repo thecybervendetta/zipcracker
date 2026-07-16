@@ -1,14 +1,14 @@
-# ZipCracker ⚡
+# ZipCracker
 
 A lightweight, efficient Bash-based dictionary attack tool for password-protected ZIP files.
 
-## 🚀 Features
+## Features
 - **Memory Efficient**: Processes password lists line-by-line (safe for large files).
 - **Fast Testing**: Uses `unzip -t` to test passwords in-memory without extracting files to disk.
 - **Silent Mode**: Suppresses all standard error noise for a clean terminal output.
 - **Pure Bash**: No heavy dependencies; requires only `unzip`.
 
-## 🛠️ Installation & Usage
+## Installation & Usage
 
 1. **Clone the repository:**
    ```bash
@@ -29,7 +29,7 @@ A lightweight, efficient Bash-based dictionary attack tool for password-protecte
 
 Note: passwords.txt is the password list required, and secure.zip is the encrypted zip file, you can use the path these parameters in the script(i.e /home/user/Downloads/passwords.txt, /home/user/Downloads/secure.zip)
 
-📋 Requirements
+Requirements
 1. Linux
 
 2. unzip utility (installed by default on most distros)
